@@ -49,7 +49,7 @@ const AppProvider = ({ children }) => {
       let email = localStorage.getItem("email");
       // console.log(email);
       if (email) {
-        const res = await axios.post(`${process.env.React_APP_BASE_URL}/addToCart`, credentials, {
+        const res = await axios.post(`${process.env.React_APP_BASE_URL}/api/addToCart`, credentials, {
           headers: {
             "Content-Type": "application/json"
           },

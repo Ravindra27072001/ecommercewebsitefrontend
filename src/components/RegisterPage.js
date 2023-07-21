@@ -33,7 +33,7 @@ const RegisterForm = () => {
         try {
             // const { username, email, password } = values;
             console.log(`${process.env.React_APP_BASE_URL}/api/register`)
-            const result = await axios.post(`${process.env.React_APP_BASE_URL}/register`, values); //------Change in this line add .env file and add port number into it-----------------------------------------
+            const result = await axios.post(`${process.env.React_APP_BASE_URL}/api/register`, values); //------Change in this line add .env file and add port number into it-----------------------------------------
             console.log(result);
 
             toast.success(result.data.message, {

@@ -8,7 +8,7 @@ const Home = () => {
 
   const { products, getCartId } = useGlobalContext();
 
-  console.log(process.env.React_APP_BASE_URL);
+  // console.log(process.env.React_APP_BASE_URL);
 
   return (
     <div className='row m-2' >

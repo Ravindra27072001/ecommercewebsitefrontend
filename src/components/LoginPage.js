@@ -28,7 +28,7 @@ const RegisterForm = () => {
     try {
       
       console.log(process.env.React_APP_BASE_URL);
-      const res = await axios.post(`${process.env.React_APP_BASE_URL}api/login`, values, {
+      const res = await axios.post(`${process.env.React_APP_BASE_URL}/api/login`, values, {
         headers: {
           "Content-Type": "application/json"
         },

@@ -37,7 +37,7 @@ const Cart = () => {
   const showCart = async () => {
     try {
       if (email) {
-        let res = await axios.get(`${process.env.React_APP_BASE_URL}/cart/${email}`, {
+        let res = await axios.get(`${process.env.React_APP_BASE_URL}/api/cart/${email}`, {
           headers: {
             "Content-Type": "application/json"
           },
@@ -54,7 +54,7 @@ const Cart = () => {
 
   const deleteCartItem = async (id) => {
     try {
-      let res = await axios.delete(`${process.env.React_APP_React_APP_BASE_URL}/deleteCartItem/${id}`);
+      let res = await axios.delete(`${process.env.React_APP_React_APP_BASE_URL}/api/deleteCartItem/${id}`);
       // console.log(res);
       showCart();
       toast.success(res.data.message, {
